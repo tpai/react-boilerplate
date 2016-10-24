@@ -6,12 +6,14 @@ function helloWorldDecorator(Wrapper) {
             super(props);
             this.state = {
                 offset: 0.1,
-                opacity: 0,
+                opacity: 0
             };
         }
         componentDidMount() {
             setInterval(() => {
-                let { offset, opacity } = this.state;
+                let { offset } = this.state;
+                const { opacity } = this.state;
+
                 if (opacity > 1) {
                     offset = -0.1;
                 } else if (opacity < 0) {
