@@ -3,7 +3,7 @@ import {
     Router,
     Route,
     IndexRoute,
-    browserHistory,
+    browserHistory
 } from 'react-router';
 
 import App from 'App';

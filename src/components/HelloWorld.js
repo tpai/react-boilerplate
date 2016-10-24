@@ -2,15 +2,17 @@ import React, { PropTypes } from 'react';
 
 function Home({ opacity }) {
     return (
-        <p
-          style={{ opacity }}
-          className="text-xs-center display-1"
-        >Hello World!</p>
+        <div>
+            <p
+              style={{ opacity }}
+              className="text-xs-center display-1"
+            >Hello World!</p>
+        </div>
    );
 }
 
 Home.propTypes = {
-    opacity: PropTypes.number.isRequired,
+    opacity: PropTypes.number.isRequired
 };
 
 export default Home;

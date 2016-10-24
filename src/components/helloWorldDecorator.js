@@ -21,7 +21,7 @@ function helloWorldDecorator(Wrapper) {
                 }
                 this.setState({
                     offset,
-                    opacity: opacity + offset,
+                    opacity: opacity + offset
                 });
             }, 50);
         }

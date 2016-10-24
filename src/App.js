@@ -15,7 +15,7 @@ function App({ children }) {
 }
 
 App.propTypes = {
-    children: PropTypes.shape().isRequired,
+    children: PropTypes.shape().isRequired
 };
 
 export default App;
