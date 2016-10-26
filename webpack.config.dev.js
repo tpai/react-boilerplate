@@ -1,6 +1,6 @@
-var webpack = require('webpack');
-var objectAssign = require('object-assign');
-var defaultConfig = require('./webpack.config.js');
+const webpack = require('webpack');
+const objectAssign = require('object-assign');
+const defaultConfig = require('./webpack.config.js');
 
 module.exports = objectAssign({}, defaultConfig, {
     devtool: 'cheap-module-source-map',

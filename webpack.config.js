@@ -1,11 +1,11 @@
 /* global __dirname */
-var path = require('path');
-var autoprefixer = require('autoprefixer');
-var postcssImport = require('postcss-import');
+const path = require('path');
+const autoprefixer = require('autoprefixer');
+const postcssImport = require('postcss-import');
 
 module.exports = {
     resolve: {
-        root: [ path.resolve('./src') ],
+        root: [path.resolve('./src')],
         extensions: ['', '.js', '.jsx', '.css', '.scss']
     },
     output: {
@@ -19,7 +19,7 @@ module.exports = {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
                 loader: 'eslint-loader'
-            },
+            }
         ],
         loaders: [
             {
@@ -33,16 +33,14 @@ module.exports = {
             }
         ]
     },
-    postcss: function(webpack) {
-        return {
-            defaults: [postcssImport, autoprefixer],
-            cleaner: [
-                postcssImport({
-                    addDependencyTo: webpack,
-                    path: [ path.resolve(__dirname + '/src') ]
-                }),
-                autoprefixer({browsers:['> 5%']})
-            ]
-        }
-    }
-}
+    postcss: webpack => ({
+        defaults: [postcssImport, autoprefixer],
+        cleaner: [
+            postcssImport({
+                addDependencyTo: webpack,
+                path: [path.resolve(__dirname, '/src')]
+            }),
+            autoprefixer({ browsers: ['> 5%'] })
+        ]
+    })
+};
