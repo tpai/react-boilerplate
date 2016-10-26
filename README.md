@@ -1,4 +1,4 @@
-# New Landing Page
+# React Boilerplate
 
 ## Usage
 
